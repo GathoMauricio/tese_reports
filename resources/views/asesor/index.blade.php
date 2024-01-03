@@ -5,9 +5,12 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Asesores</div>
+                    <div class="card-header">
+                        <h5 class="text-info">Asesores</h5>
+                    </div>
 
                     <div class="card-body">
+                        <center>{{ $asesores->links('pagination::simple-tailwind') }}</center>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -30,6 +33,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        <center>{{ $asesores->links('pagination::simple-tailwind') }}</center>
                     </div>
                 </div>
             </div>
