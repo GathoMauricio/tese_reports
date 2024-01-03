@@ -22,7 +22,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="card">
-                                        <div class="card-header"><a href="#">Catálogo Asesores</a></div>
+                                        <div class="card-header"><a href="{{ route('catalogo_asesores') }}">Catálogo
+                                                Asesores</a></div>
                                         <div class="card-body">
                                             <img src="{{ asset('img/asesor_img.png') }}"
                                                 alt="{{ asset('img/asesor_img.png') }}" width="100%" height="200">

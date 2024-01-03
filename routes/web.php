@@ -8,3 +8,6 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('/'
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/configuracion', [App\Http\Controllers\UserController::class, 'configuracion'])->name('configuracion');
 Route::put('update_alumno', [App\Http\Controllers\UserController::class, 'updateAlumno'])->name('update_alumno');
+
+#Admin routes
+Route::get('/catalogo_asesores', [App\Http\Controllers\AsesorController::class, 'index'])->name('catalogo_asesores');
