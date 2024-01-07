@@ -9,7 +9,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/configuracion', [App\Http\Controllers\UserController::class, 'configuracion'])->name('configuracion');
 Route::put('update_alumno', [App\Http\Controllers\UserController::class, 'updateAlumno'])->name('update_alumno');
 Route::put('update_password_alumno/{id}', [App\Http\Controllers\AlumnoController::class, 'updatePassword'])->name('update_password_alumno');
-Route::get('/catalogo_asesores', [App\Http\Controllers\AsesorController::class, 'index'])->name('catalogo_asesores');
 Route::get('generar_reporte/{alumno_id}/{reporte_id}/{codigo}', [App\Http\Controllers\ReporteController::class, 'generarReporte'])->name('generar_reporte');
 Route::get('ver_alumno/{id}', [App\Http\Controllers\AlumnoController::class, 'show'])->name('ver_alumno');
 Route::put('update_asesor/{id}', [App\Http\Controllers\AsesorController::class, 'update'])->name('update_asesor');
@@ -19,3 +18,8 @@ Route::put('update_seccion', [App\Http\Controllers\SeccionController::class, 'up
 Route::put('update_reporte', [App\Http\Controllers\ReporteController::class, 'update'])->name('update_reporte');
 Route::put('update_admin/{id}', [App\Http\Controllers\AsesorController::class, 'update'])->name('update_admin');
 Route::put('update_password_admin/{id}', [App\Http\Controllers\AdminController::class, 'updatePassword'])->name('update_password_admin');
+Route::resource('admins', App\Http\Controllers\AdminController::class);
+Route::resource('alumnos', App\Http\Controllers\AlumnoController::class);
+Route::resource('asesores', App\Http\Controllers\AsesorController::class);
+Route::get('descarga_plantilla', [App\Http\Controllers\AlumnoController::class, 'descargarPlantilla'])->name('descarga_plantilla');
+Route::post('carga_plantilla', [App\Http\Controllers\AlumnoController::class, 'cargarPlantilla'])->name('carga_plantilla');

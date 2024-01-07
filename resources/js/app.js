@@ -37,3 +37,40 @@ window.editarReporte = (reporte_id, nombre_reporte) => {
     $("#txt_nombre_reporte").val(nombre_reporte);
     $("#edit_reporte").modal("show");
 };
+
+window.eliminarAlumno = (id) => {
+    alertify.confirm(
+        "Eliminar",
+        "¿Realmente desea eliminar este registro?",
+        function () {
+            $("#form_eliminar_alumno_" + id).submit();
+        },
+        function () {}
+    );
+};
+
+window.eliminarAsesor = (id) => {
+    alertify.confirm(
+        "Eliminar",
+        "¿Realmente desea eliminar este registro?",
+        function () {
+            $("#form_eliminar_asesor_" + id).submit();
+        },
+        function () {}
+    );
+};
+
+window.eliminarAdmin = (id) => {
+    alertify.confirm(
+        "Eliminar",
+        "¿Realmente desea eliminar este registro?",
+        function () {
+            $("#form_eliminar_admin_" + id).submit();
+        },
+        function () {}
+    );
+};
+
+window.cargarAlumnos = () => {
+    $("#cargar_alumnos").modal("show");
+};

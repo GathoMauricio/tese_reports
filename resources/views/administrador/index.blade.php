@@ -6,12 +6,12 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="text-info">Asesores</h5>
+                        <h5 class="text-info">Administradores</h5>
                     </div>
 
                     <div class="card-body">
                         <div style="float: right;">
-                            {{ $asesores->links('pagination::bootstrap-4') }}
+                            {{ $admins->links('pagination::bootstrap-4') }}
                         </div>
                         <table class="table">
                             <thead>
@@ -24,23 +24,23 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($asesores as $asesor)
+                                @foreach ($admins as $admin)
                                     <tr>
-                                        <td>{{ $asesor->nombre_usuario }}</td>
-                                        <td>{{ $asesor->apaterno_usuario }}</td>
-                                        <td>{{ $asesor->amaterno_usuario }}</td>
-                                        <td>{{ $asesor->email }}</td>
+                                        <td>{{ $admin->nombre_usuario }}</td>
+                                        <td>{{ $admin->apaterno_usuario }}</td>
+                                        <td>{{ $admin->amaterno_usuario }}</td>
+                                        <td>{{ $admin->email }}</td>
                                         <td>
-                                            <a href="{{ route('asesores.edit', $asesor->id) }}" style="font-size: 22px;"
+                                            <a href="{{ route('admins.edit', $admin->id) }}" style="font-size: 22px;"
                                                 class="btn btn-primary">
                                                 <i class="bi bi-pencil-square"></i>
                                             </a>
-                                            <a href="javascript:void(0)" onclick="eliminarAsesor({{ $asesor->id }})"
+                                            <a href="javascript:void(0)" onclick="eliminarAdmin({{ $admin->id }})"
                                                 style="font-size: 22px;" class="btn btn-danger">
                                                 <i class="bi bi-trash3-fill"></i>
                                             </a>
-                                            <form action="{{ route('asesores.destroy', $asesor->id) }}"
-                                                id="form_eliminar_asesor_{{ $asesor->id }}" method="POST">
+                                            <form action="{{ route('admins.destroy', $admin->id) }}"
+                                                id="form_eliminar_admin_{{ $admin->id }}" method="POST">
                                                 @csrf
                                                 @method('delete')
                                             </form>
@@ -50,7 +50,7 @@
                             </tbody>
                         </table>
                         <div style="float: right;">
-                            {{ $asesores->links('pagination::bootstrap-4') }}
+                            {{ $admins->links('pagination::bootstrap-4') }}
                         </div>
                     </div>
                 </div>

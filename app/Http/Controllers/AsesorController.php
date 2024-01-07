@@ -13,6 +13,12 @@ class AsesorController extends Controller
         return view('asesor.index', compact('asesores'));
     }
 
+    public function edit($id)
+    {
+        $asesor = User::findOrFail($id);
+        return view('asesor.edit', compact('asesor'));
+    }
+
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -43,6 +49,16 @@ class AsesorController extends Controller
         if ($asesor->save()) {
 
             return redirect()->back()->with('success_message', 'El Registro se actualizó correctamente');
+        } else {
+            return redirect()->back()->with('fail_message', 'Ocurrió un error durante el proceso');
+        }
+    }
+
+    public function destroy($id)
+    {
+        $asesor = User::findOrFail($id);
+        if ($asesor->delete()) {
+            return redirect()->back()->with('success_message', 'El Registro se eliminó correctamente');
         } else {
             return redirect()->back()->with('fail_message', 'Ocurrió un error durante el proceso');
         }
