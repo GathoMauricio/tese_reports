@@ -63,6 +63,11 @@ class User extends Authenticatable
 
     public function rol()
     {
-        return $this->belongsTo(Rol::class, 'rol_id', 'id');
+        return $this->belongsTo(Rol::class, 'rol_id', 'id')->withDefault();
+    }
+
+    public function asesor()
+    {
+        return $this->belongsTo(User::class, 'asesor_tese_id', 'id')->withDefault();
     }
 }

@@ -18,7 +18,7 @@ class AsesorSeeder extends Seeder
         ini_set('memory_limit', 0);
         User::where('rol_id', 2)->delete();
         $data = DataMigrater::ExcelArray('asesores.xlsx', 'app/db');
-        $this->command->getOutput()->writeln("Extrayendo datos:");
+        $this->command->getOutput()->writeln("Extrayendo asesores:");
         $this->command->getOutput()->progressStart(count($data));
         foreach ($data as $row) {
             $this->command->getOutput()->progressAdvance();

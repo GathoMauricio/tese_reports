@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Seccion;
+use App\Models\Reporte;
+use App\Models\User;
 use Auth;
 
 
@@ -17,10 +20,13 @@ class HomeController extends Controller
                     return view('administrador.home');
                     break;
                 case 2:
-                    return view('asesor.home');
+                    $alumnos = User::where('asesor_tese_id', Auth::user()->id)->paginate(10);
+                    return view('asesor.home', compact('alumnos'));
                     break;
                 case 3:
-                    return view('alumno.home');
+                    $secciones = Seccion::all();
+                    $reportes = Reporte::orderBy('seccion_id')->get();
+                    return view('alumno.home', compact('secciones', 'reportes'));
                     break;
             }
         } else {

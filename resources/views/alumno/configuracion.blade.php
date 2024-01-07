@@ -226,6 +226,48 @@
                         </form>
                     </div>
                 </div>
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header">
+                            <h5 class="text-primary">Contraseña</h5>
+                        </div>
+                        <div class="card-body">
+                            <form action="{{ route('update_password_alumno', Auth::user()->id) }}" method="POST"
+                                class="form">
+                                @csrf
+                                @method('PUT')
+                                <div class="row">
+                                    <div class="form-control">
+                                        <label for="nombre_usuario">Contraseña</label>
+                                        <input type="password" name="password" class="form-control">
+                                        @error('password')
+                                            <small class="texto_error text-danger">{{ $message }}</small>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="form-control">
+                                        <label for="apaterno_usuario">Repetir contraseña</label>
+                                        <input type="password" name="password_confirmation" class="form-control">
+                                        @error('password_confirmation')
+                                            <small class="texto_error text-danger">{{ $message }}</small>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input type="submit" value="Actualizar" class="btn btn-primary"
+                                            style="float: right;">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

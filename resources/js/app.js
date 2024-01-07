@@ -24,3 +24,16 @@ $(document).ready(function () {
             });
     });
 });
+
+window.editarSeccion = (seccion_id, fecha_inicio, fecha_fin) => {
+    $("#txt_seccion_id").val(seccion_id);
+    $("#txt_fecha_inicio").val(fecha_inicio);
+    $("#txt_fecha_fin").val(fecha_fin);
+    $("#edit_seccion").modal("show");
+};
+
+window.editarReporte = (reporte_id, nombre_reporte) => {
+    $("#txt_reporte_id").val(reporte_id);
+    $("#txt_nombre_reporte").val(nombre_reporte);
+    $("#edit_reporte").modal("show");
+};

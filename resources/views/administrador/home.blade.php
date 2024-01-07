@@ -13,7 +13,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="card">
-                                        <div class="card-header"><a href="#">Catálogo Administradores</a></div>
+                                        <div class="card-header"><a href="#">Administradores</a></div>
                                         <div class="card-body">
                                             <img src="{{ asset('img/admin_img.png') }}"
                                                 alt="{{ asset('img/admin_img.png') }}" width="100%" height="200">
@@ -22,8 +22,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="card">
-                                        <div class="card-header"><a href="{{ route('catalogo_asesores') }}">Catálogo
-                                                Asesores</a></div>
+                                        <div class="card-header"><a href="{{ route('catalogo_asesores') }}"> Asesores</a>
+                                        </div>
                                         <div class="card-body">
                                             <img src="{{ asset('img/asesor_img.png') }}"
                                                 alt="{{ asset('img/asesor_img.png') }}" width="100%" height="200">
@@ -35,7 +35,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="card">
-                                        <div class="card-header"><a href="#">Catálogo Alumnos</a></div>
+                                        <div class="card-header"><a href="#">Alumnos</a></div>
                                         <div class="card-body">
                                             <img src="{{ asset('img/alumno_img.png') }}"
                                                 alt="{{ asset('img/alumno_img.png') }}" width="100%" height="200">
@@ -44,7 +44,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="card">
-                                        <div class="card-header"><a href="#">Activar | Desactivar Parciales</a></div>
+                                        <div class="card-header"><a href="{{ route('documentacion') }}">Documentación</a>
+                                        </div>
                                         <div class="card-body">
                                             <img src="{{ asset('img/config_img.png') }}"
                                                 alt="{{ asset('img/config_img.png') }}" width="100%" height="200">
