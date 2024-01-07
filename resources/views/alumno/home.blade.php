@@ -17,7 +17,6 @@
                                         <center>
                                             Habilitado del {{ $seccion->fecha_inicio }} al {{ $seccion->fecha_fin }}
                                         </center>
-                                        {{ date('Y-m-d') }}
                                     </div>
                                     <div class="card-body">
                                         <table class="table">
