@@ -14,7 +14,7 @@ class ReporteController extends Controller
         $alumno = User::findOrFail($alumno_id);
         $reporte = Reporte::findOrFail($reporte_id);
 
-        $pdf = PDF::loadView(
+        $pdf = \PDF::loadView(
             'reporte/' . $reporte->codigo_reporte,
             compact('alumno')
         );
