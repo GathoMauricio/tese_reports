@@ -17,6 +17,7 @@
                                         <center>
                                             Habilitado del {{ $seccion->fecha_inicio }} al {{ $seccion->fecha_fin }}
                                         </center>
+                                        {{ date('Y-m-d') }}
                                     </div>
                                     <div class="card-body">
                                         <table class="table">
@@ -28,11 +29,18 @@
                                                             {{ $reporte->nombre_reporte }}
                                                         </td>
                                                         <td width="10%">
-                                                            <a href="{{ route('generar_reporte', [Auth::user()->id, $reporte->id, $reporte->codigo_reporte]) }}"
-                                                                target="_BLANK" style="font-size: 22px;"
-                                                                class="btn btn-danger">
-                                                                <i class="bi bi-file-earmark-pdf-fill"></i>
-                                                            </a>
+                                                            @php
+                                                                $fechaInicio = Carbon\Carbon::parse($seccion->fecha_inicio); //->subDay();
+                                                                $fechaFin = Carbon\Carbon::parse($seccion->fecha_fin)->addDay();
+                                                                $hoy = Carbon\Carbon::parse(date('Y-m-d'));
+                                                            @endphp
+                                                            @if ($hoy->between($fechaInicio, $fechaFin))
+                                                                <a href="{{ route('generar_reporte', [Auth::user()->id, $reporte->id, $reporte->codigo_reporte]) }}"
+                                                                    target="_BLANK" style="font-size: 22px;"
+                                                                    class="btn btn-danger">
+                                                                    <i class="bi bi-file-earmark-pdf-fill"></i>
+                                                                </a>
+                                                            @endif
                                                         </td>
                                                         {{--  <td width="10%">
                                                             <a href="#" style="font-size: 22px;"
