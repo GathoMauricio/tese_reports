@@ -44,8 +44,9 @@ class UserController extends Controller
             'nombre_dirige_documentacion' => 'required',
             'cargo_dirige_documentacion' => 'required',
             'horario_residencia' => 'required',
+            'periodo_comprendido' => 'required',
             'nombre_proyecto' => 'required',
-            //'beneficio_empresa' => 'required',
+            'beneficio_empresa' => 'required',
             'asesor_empresa' => 'required',
         ], [
             'asesor_tese_id.required' => 'Ingrese el asesor TESE.',
@@ -64,6 +65,7 @@ class UserController extends Controller
             'nombre_dirige_documentacion.required' => 'Ingrese el nombre de la persona a quien deberá dirigirse la documentación',
             'cargo_dirige_documentacion.required' => 'Ingrese el cargo de la persona a quien deberá dirigirse la documentación',
             'horario_residencia.required' => 'Ingrese el horario en que se realizará la residencia profesional',
+            'periodo_comprendido' => 'Ingrese el periodo que comprendera el proyecto',
             'nombre_proyecto.required' => 'Ingrese el nombre del proyecto.',
             'beneficio_empresa.required' => 'Ingrese el beneficio que recibirá la empresa.',
             'asesor_empresa.required' => 'Seleccione el asesor por parte de la empresa.',

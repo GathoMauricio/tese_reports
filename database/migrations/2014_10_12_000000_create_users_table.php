@@ -35,6 +35,7 @@ class CreateUsersTable extends Migration
             $table->string('nombre_dirige_documentacion')->nullable();
             $table->string('cargo_dirige_documentacion')->nullable();
             $table->string('horario_residencia')->nullable();
+            $table->string('periodo_comprendido')->nullable();
             $table->string('nombre_proyecto')->nullable();
             $table->string('beneficio_empresa')->nullable();
             $table->string('asesor_empresa')->nullable();

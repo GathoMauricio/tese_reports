@@ -39,6 +39,7 @@ class User extends Authenticatable
         'nombre_dirige_documentacion',
         'cargo_dirige_documentacion',
         'horario_residencia',
+        'periodo_comprendido',
         'nombre_proyecto',
         'beneficio_empresa',
         'asesor_empresa',

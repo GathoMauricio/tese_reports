@@ -24,7 +24,9 @@
             {{ $alumno->apaterno_usuario }} {{ $alumno->amaterno_usuario }}</b>, con matrícula
         <b>{{ $alumno->matricula_usuario }}</b>
         , quien
-        realizará dicha residencia profesional durante el periodo comprendido del ____________ al __________ en la empresa
+        realizará dicha residencia profesional durante el periodo comprendido <b>{{ $alumno->periodo_comprendido }}</b> en
+        la
+        empresa
         <b>{{ $alumno->nombre_empresa }}</b>, ubicada en <b>{{ $alumno->direccion_empresa }}</b>.
         <br><br>
         El proyecto a desarrollar es: <b>{{ $alumno->nombre_proyecto }}</b>

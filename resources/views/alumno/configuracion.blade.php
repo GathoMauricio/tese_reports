@@ -169,6 +169,17 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-control">
+                                        <label for="periodo_comprendido">Preriodo comprendido</label>
+                                        <input type="text" value="{{ $usuario->periodo_comprendido }}"
+                                            name="periodo_comprendido" class="form-control">
+                                        <small class="texto_error text-danger"
+                                            id="texto_error_periodo_comprendido"></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-control">
                                         <label for="nombre_proyecto">Nombre del proyecto</label>
                                         <input type="text" value="{{ $usuario->nombre_proyecto }}"
                                             name="nombre_proyecto" class="form-control">
