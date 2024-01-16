@@ -17,7 +17,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="nombre_reporte">
-                                    Fecha inicio
+                                    Nombre del reporte
                                 </label>
                                 <input type="text" name="nombre_reporte" id="txt_nombre_reporte" class="form-control"
                                     required>
