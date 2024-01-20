@@ -24,7 +24,7 @@
                             <br>
                             <div class="row">
                                 <div class="form-control">
-                                    <label for="nombre_usuario">Nombre del administrador</label>
+                                    <label for="nombre_usuario">Nombre del alumno</label>
                                     <input type="text" value="{{ $alumno->nombre_usuario }}" name="nombre_usuario"
                                         class="form-control">
                                     @error('nombre_usuario')
@@ -35,7 +35,7 @@
                             <br>
                             <div class="row">
                                 <div class="form-control">
-                                    <label for="apaterno_usuario">A. Paterno del administrador</label>
+                                    <label for="apaterno_usuario">A. Paterno del alumno</label>
                                     <input type="text" value="{{ $alumno->apaterno_usuario }}" name="apaterno_usuario"
                                         class="form-control">
                                     @error('apaterno_usuario')
@@ -46,7 +46,7 @@
                             <br>
                             <div class="row">
                                 <div class="form-control">
-                                    <label for="amaterno_usuario">A. Materno del administrador</label>
+                                    <label for="amaterno_usuario">A. Materno del alumno</label>
                                     <input type="text" value="{{ $alumno->amaterno_usuario }}" name="amaterno_usuario"
                                         class="form-control">
                                     @error('amaterno_usuario')
